@@ -7,6 +7,8 @@
 // @grant        none
 // @run-at       document-start
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=spotify.com
+// @downloadURL https://raw.githubusercontent.com/snoopti/SpotifyAdBlocker/main/script.js
+// @updateURL https://raw.githubusercontent.com/snoopti/SpotifyAdBlocker/main/script.js
 // ==/UserScript==
 
 !(async function () {
