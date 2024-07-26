@@ -9,6 +9,8 @@
 // @run-at       document-start
 // @license MIT  https://github.com/snoopti/SpotifyAdBlocker/blob/main/LICENSE
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=spotify.com
+// @downloadURL https://update.greasyfork.org/scripts/501822/SPOTIFY%20ADBLOCKER.user.js
+// @updateURL https://update.greasyfork.org/scripts/501822/SPOTIFY%20ADBLOCKER.meta.js
 // ==/UserScript==
  
 !(async function () {
