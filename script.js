@@ -7,8 +7,8 @@
 // @grant        none
 // @run-at       document-start
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=spotify.com
-// @downloadURL https://raw.githubusercontent.com/snoopti/SpotifyAdBlocker/main/script.js
-// @updateURL https://raw.githubusercontent.com/snoopti/SpotifyAdBlocker/main/script.js
+// @downloadURL  https://raw.githubusercontent.com/snoopti/SpotifyAdBlocker/main/script.js
+// @updateURL    https://raw.githubusercontent.com/snoopti/SpotifyAdBlocker/main/script.js
 // ==/UserScript==
 
 !(async function () {
@@ -34,10 +34,15 @@
     };
   }
 
+  console.log("Waiting for now-playing-bar...");
   const nowPlayingBar = await queryAsync(".now-playing-bar");
+  console.log("Found now-playing-bar.");
+
+  console.log("Waiting for play button...");
   const playButton = await queryAsync(
     "button[title=Play], button[title=Pause]"
   );
+  console.log("Found play button.");
 
   let audio;
 
@@ -47,8 +52,8 @@
     transform(result, type) {
       if (type === "audio") {
         audio = result;
+        console.log("Audio element created.");
       }
-
       return result;
     },
   });
@@ -59,11 +64,11 @@
 
     if (link) {
       if (!audio) {
-        return console.error("error! song not fount");
+        return console.error("Error! Audio element not found.");
       }
 
       if (!playButton) {
-        return console.error("error! button not found");
+        return console.error("Error! Play button not found.");
       }
 
       audio.src = "";
