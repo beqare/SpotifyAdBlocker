@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SPOTIFY ADBLOCKER
-// @namespace    http://tampermonkey.net/
-// @version      1.2
+// @namespace    https://tampermonkey.net/
+// @version      1.3
 // @description  no annoying spotify ads
 // @author       snoopti
 // @match        https://*.spotify.com/*
