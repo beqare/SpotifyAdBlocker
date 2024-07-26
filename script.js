@@ -59,11 +59,11 @@
 
     if (link) {
       if (!audio) {
-        return console.error("error");
+        return console.error("error! song not fount");
       }
 
       if (!playButton) {
-        return console.error("error");
+        return console.error("error! button not found");
       }
 
       audio.src = "";
