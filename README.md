@@ -10,17 +10,9 @@ Follow these steps to install the Spotify Ad Blocker script:
 
 Install the [Tampermonkey Addon](https://www.tampermonkey.net/) for your browser.
 
-### Step 2: Create a New Userscript
+### Step 2: Install
 
-Click on the Tampermonkey Addon icon in your browser and select `Create a new userscript`.
-
-### Step 3: Add the Script
-
-Remove all the default code in the userscript editor and paste the contents of my [Spotify Ad Blocker script](https://github.com/snoopti/SpotifyAdBlocker/blob/main/script.js).
-
-### Step 4: Refresh Spotify
-
-Refresh your Spotify web player, and you're done! Enjoy ad-free listening.
+Install the script from [grasyfork](https://greasyfork.org/de/scripts/501822-spotify-adblocker)
 
 ---
 

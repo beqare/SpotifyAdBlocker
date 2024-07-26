@@ -2,14 +2,15 @@
 // @name         SPOTIFY ADBLOCKER
 // @namespace    http://tampermonkey.net/
 // @version      1.1
-// @description  no spotify ads
+// @description  no annoying spotify ads
 // @author       snoopti
 // @match        https://*.spotify.com/*
 // @grant        none
 // @run-at       document-start
+// @license MIT  https://github.com/snoopti/SpotifyAdBlocker/blob/main/LICENSE
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=spotify.com
-// @downloadURL  https://raw.githubusercontent.com/snoopti/SpotifyAdBlocker/main/script.js
-// @updateURL    https://raw.githubusercontent.com/snoopti/SpotifyAdBlocker/main/script.js
+// @downloadURL https://update.greasyfork.org/scripts/501822/SPOTIFY%20ADBLOCKER.user.js
+// @updateURL https://update.greasyfork.org/scripts/501822/SPOTIFY%20ADBLOCKER.meta.js
 // ==/UserScript==
 
 !(async function () {
