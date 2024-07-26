@@ -34,15 +34,10 @@
     };
   }
 
-  console.log("Waiting for now-playing-bar...");
   const nowPlayingBar = await queryAsync(".now-playing-bar");
-  console.log("Found now-playing-bar.");
-
-  console.log("Waiting for play button...");
   const playButton = await queryAsync(
     "button[title=Play], button[title=Pause]"
   );
-  console.log("Found play button.");
 
   let audio;
 
@@ -52,7 +47,6 @@
     transform(result, type) {
       if (type === "audio") {
         audio = result;
-        console.log("Audio element created.");
       }
       return result;
     },
@@ -64,11 +58,11 @@
 
     if (link) {
       if (!audio) {
-        return console.error("Error! Audio element not found.");
+        return;
       }
 
       if (!playButton) {
-        return console.error("Error! Play button not found.");
+        return;
       }
 
       audio.src = "";
