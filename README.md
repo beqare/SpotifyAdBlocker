@@ -12,7 +12,7 @@ Install the [Tampermonkey Addon](https://www.tampermonkey.net/) for your browser
 
 ### Step 2: Install
 
-Install the script from [grasyfork](https://greasyfork.org/de/scripts/501822-spotify-adblocker)
+Download the latest version from [grasyfork](https://greasyfork.org/de/scripts/501822-spotify-adblocker)
 
 ---
 
