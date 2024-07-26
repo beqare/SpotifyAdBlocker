@@ -88,6 +88,4 @@
     attributes: true,
     subtree: true,
   });
-
-  document.body.appendChild(style);
 })();
