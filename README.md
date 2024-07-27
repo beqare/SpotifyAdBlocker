@@ -18,7 +18,7 @@ Download the latest version from [grasyfork](https://greasyfork.org/de/scripts/5
 
 ## Support
 
-If you encounter any issues or have questions, feel free to open an issue on the [GitHub repository](https://github.com/snoopti/SpotifyAdBlocker/issues).
+If you encounter any issues or have questions, feel free to open an issue on the [GitHub repository](https://github.com/beqare/SpotifyAdBlocker/issues).
 
 ## Disclaimer
 
