@@ -28,7 +28,7 @@ This script is for educational purposes only. Use it at your own risk.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/snoopti/SpotifyAdBlocker/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/beqare/SpotifyAdBlocker/blob/main/LICENSE) file for details.
 
 ---
 
