@@ -12,7 +12,7 @@
 // @downloadURL https://update.greasyfork.org/scripts/501822/SPOTIFY%20ADBLOCKER.user.js
 // @updateURL https://update.greasyfork.org/scripts/501822/SPOTIFY%20ADBLOCKER.meta.js
 // ==/UserScript==
- 
+
 !(async function () {
   async function queryAsync(query) {
     return new Promise((resolve) => {
@@ -25,7 +25,7 @@
       }, 250);
     });
   }
- 
+
   function inject({ ctx, fn, middleware, transform }) {
     const original = ctx[fn];
     ctx[fn] = function () {
@@ -35,14 +35,14 @@
       }
     };
   }
- 
+
   const nowPlayingBar = await queryAsync(".now-playing-bar");
   const playButton = await queryAsync(
     "button[title=Play], button[title=Pause]"
   );
- 
+
   let audio;
- 
+
   inject({
     ctx: document,
     fn: "createElement",
@@ -53,20 +53,20 @@
       return result;
     },
   });
- 
+
   let playInterval;
   new MutationObserver(() => {
     const link = document.querySelector(".now-playing > a");
- 
+
     if (link) {
       if (!audio) {
         return;
       }
- 
+
       if (!playButton) {
         return;
       }
- 
+
       audio.src = "";
       playButton.click();
       if (!playInterval) {
@@ -89,4 +89,36 @@
     attributes: true,
     subtree: true,
   });
+})();
+
+(function () {
+  "use strict";
+
+  function removeElementsByClassName(className) {
+    let elements = document.getElementsByClassName(className);
+    while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
+    }
+  }
+
+  removeElementsByClassName(
+    "ButtonInner-sc-14ud5tc-0 ksgXuD encore-over-media-set"
+  );
+
+  removeElementsByClassName(
+    "ButtonInner-sc-14ud5tc-0 kNmeGH encore-inverted-light-set Upqw01TOXETOmR5Td7Dj"
+  );
+
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function () {
+      removeElementsByClassName(
+        "ButtonInner-sc-14ud5tc-0 ksgXuD encore-over-media-set"
+      );
+      removeElementsByClassName(
+        "ButtonInner-sc-14ud5tc-0 kNmeGH encore-inverted-light-set Upqw01TOXETOmR5Td7Dj"
+      );
+    });
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
 })();
