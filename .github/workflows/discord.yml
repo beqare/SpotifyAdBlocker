@@ -1,0 +1,29 @@
+name: Notify Discord
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Notify Discord
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fetch = require('node-fetch');
+            const url = 'https://discord.com/api/webhooks/1286415756816421016/6JfE-ohLsNcvaObuxRnRh6cJffwr8G_rzLPRP53hPNfMw-WgmJFmH5sA1HLQ7adaIjGR';
+            const message = {
+              content: `Ein neuer Commit wurde auf den Branch \`${process.env.GITHUB_REF}\` gepusht!\n` +
+                       `Commit: \`${process.env.GITHUB_SHA}\`\n` +
+                       `Autor: \`${process.env.GITHUB_ACTOR}\`\n` +
+                       `Repository: \`${process.env.GITHUB_REPOSITORY}\``
+            };
+            await fetch(url, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(message),
+            });
