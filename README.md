@@ -2,6 +2,10 @@
 
 Welcome to my script for Spotify that skips the annoying ads.
 
+What it do:
+- skips ads
+- remove the "Get Premium" Button
+
 ## How to Install
 
 Follow these steps to install the Spotify Ad Blocker script:
