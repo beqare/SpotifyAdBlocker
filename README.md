@@ -2,6 +2,10 @@
 
 Welcome to my script for Spotify that skips the annoying ads.
 
+What it do:
+- skips ads
+- remove the "Get Premium" Button
+
 ## How to Install
 
 Follow these steps to install the Spotify Ad Blocker script:
@@ -10,9 +14,9 @@ Follow these steps to install the Spotify Ad Blocker script:
 
 Install the [Tampermonkey Addon](https://www.tampermonkey.net/) for your browser.
 
-### Step 2: Install
+### Step 2: Install the Script
 
-Download the latest version from [grasyfork](https://greasyfork.org/de/scripts/501822-spotify-adblocker)
+Download the latest version of SpotifyAdBlocker from [grasyfork](https://greasyfork.org/de/scripts/501822-spotify-adblocker)
 
 ---
 
@@ -32,24 +36,4 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 
 ---
 
-## How it works (thanks to chatgpt for the explanation)
-
-1. **Initialization and Querying Elements**:
-
-   - The script begins with an asynchronous function.
-   - It uses a helper function to repeatedly check for specific elements on the page, such as the now-playing bar and the play/pause button, until they are found.
-
-2. **Extending `createElement` Function**:
-
-   - Another helper function is used to modify the `document.createElement` method.
-   - This modification checks if an audio element is being created and stores a reference to it.
-
-3. **Observing `now-playing-bar` Element**:
-
-   - A `MutationObserver` instance is created to watch for changes in the now-playing bar element.
-   - This observation includes changes to character data, child elements, attributes, and subtrees of the now-playing bar.
-
-4. **Skipping Ads**:
-   - The `MutationObserver` continuously checks if a link appears within the now-playing container, indicating an ad is playing.
-   - When an ad is detected, the script clears the audio source and repeatedly clicks the play/pause button.
-   - This repeated clicking continues until the ad is skipped and regular music playback resumes.
+:)
